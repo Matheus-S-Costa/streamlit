@@ -2,7 +2,7 @@
 
 ## Preview do site
 
-![preview](./git/previa2.png)
+![preview](presents.png)
 
 Projeto construído para aprimorar meus conhecimentos com a biblioteca streamlit e facilitar o acesso para meus projetos e trabalhos.
 
