@@ -124,9 +124,12 @@ else:
 
 
 st.sidebar.title('Vamos trabalhar juntos?')
-st.sidebar.write('Contate-me: ')
+st.sidebar.subheader('Contate-me: ')
+st.sidebar.write('📧: matheusilva334@gmail.com')
 url_git = 'https://github.com/Matheus-S-Costa'
 st.sidebar.write("🖥-[GitHub](%s)" % url_git)
-url_linkedin = 'https://www.linkedin.com/in/matheus-costa-a95722197/'
+url_linkedin = 'https://www.linkedin.com/in/matheus-s-costaa/'
 st.sidebar.write('📱-[LinkedIn](%s)' % url_linkedin)
-st.sidebar.write('📧: matheusilva334@gmail.com')
+url_curriculo = 'https://drive.google.com/drive/folders/1YjqPgTkX0X51XKj8plJrlPF6yiWzjYyu'
+st.sidebar.write("📃-[Meu curículo](%s)" % url_curriculo)
+
