@@ -75,17 +75,17 @@ else:
         ''')
     with st.expander('Ver detalhes Python:'):
         st.text('Utilizo python para analise de dados utilizando pandas, e até para criação de games como mostra o vídeo abaixo: ')
-        video_file = open('pygame.webm', 'rb')
+        video_file = open('pygame.mp4', 'rb')
         video_bytes = video_file.read()
         st.video(video_bytes)
     with st.expander('Ver detalhes HTML5 e CSS3:'):
         st.text('Utilizando HTML para a edição de textos e o CSS para a estilização, desenvolvo alguns sites simples, no projeto abaixo construi em conjunto com a ROCKETSEAT: ')
-        video_file = open('NLW.webm', 'rb')
+        video_file = open('NLW.mp4', 'rb')
         video_bytes = video_file.read()
         st.video(video_bytes)
     with st.expander('Ver detalhes javascript:'):
         st.text('Utilizando javascript, typescript, react e o CSS para a estilização, desenvolvi um site para encontrar duo em jogos online, no projeto abaixo também construi em conjunto com a ROCKETSEAT, porém dessa vez construí também um servidor para cadastrar os anúncios: ')
-        video_file = open('js.webm', 'rb')
+        video_file = open('js.mov', 'rb')
         video_bytes = video_file.read()
         st.video(video_bytes)
     with st.expander('Ver detalhes Matlab:'):
