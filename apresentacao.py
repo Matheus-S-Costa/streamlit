@@ -1,7 +1,8 @@
 import streamlit as st
 from PIL import Image
-st.set_page_config(page_title='Portfolio Matheus Costa' ,layout="wide",page_icon='💻')
+import pandas as pd
 
+st.set_page_config(page_title='Portfolio Matheus Costa' ,layout="wide",page_icon='💻')
 
 st.markdown('---')
 
@@ -39,9 +40,9 @@ elif visual == 'Carreira':
     if st.button('Graduação'):
         st.write('Após a conclusão do meu ensino médio escolhi ingressar na faculdade de engenharia de computação, principalmente por ter me interessado por ciência da computação. Aqui estou aprimorando meus conhecimentos em desenvolvimento de sistemas, estou utilizando softwares de computação em nuvem da AWS, python para elaborar jogos, sites e para análise de dados, estou utilizando também javascript, html e css para desenvolvimento web.')
 
-    st.header('Projetos 📃')
+    st.header('Certificados 📃')
     st.write('Estou sempre em busca de construir novos métodos que facilitem nosso dia-a-dia, tanto para empresas quanto para uso pessoal. Confira meus projetos no github (link na aba lateral).')
-    st.write('Além disso, para que meus principais certificados possam ser vistos, há alguns botões referentes aos certificados com imagens que podem ser expandidas para facilitar a visualização. Sempre estou em busca de me manter atualizado, portanto, haverá um link com meus certificados, no qual estará em constante atualização!')
+    st.write('Agora, para que meus principais certificados possam ser vistos, há alguns botões referentes aos certificados com imagens que podem ser expandidas para facilitar a visualização. Sempre estou em busca de me manter atualizado, portanto, haverá um link com meus certificados, no qual estará em constante atualização!')
     url_certificados = "https://drive.google.com/drive/folders/1jwOozs2G5rkWRYNifckZIb-g8UxVrT6e?usp=sharing"
     st.write("📜-[Alguns dos meus certificados](%s)" % url_certificados)
     col6, col7, col8 = st.columns(3)
@@ -59,14 +60,38 @@ elif visual == 'Carreira':
             st.image(image3)
 
 else:
-    st.title('Habilidades💻')
-    st.bar_chart({'linguagens': [2, 4, 5, 8, 9]})
-    st.caption(
-        'Linhas, 0: Javascript // 1: C++ // 2: HTML5 e CSS3 // 3: C // 4: Python')
-    with st.expander('Ver explicação:'):
-        st.write('''
-        O gráfico acima indica algumas linguagens as quais já tenho certa prática e em uma escala de 0 a 10, o quão confortável me sinto as utilizando. Busco me atentar tanto às linguagens que envolvem back-end quanto front-end.
+    st.title('Habilidades/Projetos💻')
+    def load_data():
+        return pd.DataFrame(
+            {
+                'Linguagens/software': ['Python', 'html e css', 'javascript', 'matlab'],
+                'Maiores utilidades': ['versatil, data science', 'Complemento desenvolvimento web', 'Desenvolvimento web', 'Calculos e plot de graficos']
+            }
+        )
+    df = load_data()
+    st.dataframe(df)
+    st.write('''
+         Cada linguagem tem seus pontos fortes e fracos, busco explorar os pontos fortes de cada uma, sempre pesquisando sobre e me atentando às novidades.
         ''')
+    with st.expander('Ver detalhes Python:'):
+        st.text('Utilizo python para analise de dados utilizando pandas, e até para criação de games como mostra o vídeo abaixo: ')
+        video_file = open('pygame.webm', 'rb')
+        video_bytes = video_file.read()
+        st.video(video_bytes)
+    with st.expander('Ver detalhes HTML5 e CSS3:'):
+        st.text('Utilizando HTML para a edição de textos e o CSS para a estilização, desenvolvo alguns sites simples, no projeto abaixo construi em conjunto com a ROCKETSEAT: ')
+        video_file = open('NLW.webm', 'rb')
+        video_bytes = video_file.read()
+        st.video(video_bytes)
+    with st.expander('Ver detalhes javascript:'):
+        st.text('Utilizando javascript, typescript, react e o CSS para a estilização, desenvolvi um site para encontrar duo em jogos online, no projeto abaixo também construi em conjunto com a ROCKETSEAT, porém dessa vez construí também um servidor para cadastrar os anúncios: ')
+        video_file = open('js.webm', 'rb')
+        video_bytes = video_file.read()
+        st.video(video_bytes)
+    with st.expander('Ver detalhes Matlab:'):
+        st.text('Para verificar a tensão e corrente em um sistema trifásico, foi plotado um gráfico das grandezas em função do tempo, como mostra abaixo: ')
+        imagem_mat = Image.open('matlab.jpg')
+        st.image(imagem_mat)
     st.markdown('---')
     st.subheader('Ferramentas e experiências ⚒️')
     col3, col4, col5 = st.columns(3)
@@ -86,8 +111,6 @@ else:
         st.button('C')
     with col4:
         st.button('C++')
-    with col4:
-        st.button('PHP')
     with col4:
         st.button('AWS EC2')
     with col5:
