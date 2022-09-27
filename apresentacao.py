@@ -60,7 +60,7 @@ elif visual == 'Carreira':
             st.image(image3)
 
 else:
-    st.title('Habilidades/Projetos💻')
+    st.subheader('Habilidades/Projetos💻')
     def load_data():
         return pd.DataFrame(
             {
