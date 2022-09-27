@@ -85,7 +85,7 @@ else:
         st.video(video_bytes)
     with st.expander('Ver detalhes javascript:'):
         st.text('Utilizando javascript, typescript, react e o CSS para a estilização, desenvolvi um site para encontrar duo em jogos online, no projeto abaixo também construi em conjunto com a ROCKETSEAT, porém dessa vez construí também um servidor para cadastrar os anúncios: ')
-        video_file = open('js.mov', 'rb')
+        video_file = open('js.mp4', 'rb')
         video_bytes = video_file.read()
         st.video(video_bytes)
     with st.expander('Ver detalhes Matlab:'):
