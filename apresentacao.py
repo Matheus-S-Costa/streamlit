@@ -11,7 +11,7 @@ with open('style.css') as f:
 
 
 st.sidebar.title('Portfólio pessoal')
-imagem_perfil = Image.open('perfil1.png')
+imagem_perfil = Image.open('arquivos/perfil1.png')
 st.sidebar.image(imagem_perfil)
 visual = st.sidebar.selectbox('O que você deseja saber?',
                               ('Sobre mim', 'Carreira', 'Habilidades/Experiências'))
@@ -26,11 +26,11 @@ if visual == 'Sobre mim':
     st.write('Técnico em eletrônica com mais de 2 anos de experiência profissional em macOS e iOS, atualmente procurando resolver problemas complexos de negócios usando IA e programação; Estudando desenvolvimento de soluções orientadas a dados para automatizar a digitalização de documentos para reduzir os esforços manuais; Amor para aprender coisas novas. ')
     st.markdown('---')
     st.write('- A framework de SCRUM é a que utilizo para gerenciar a maioria dos meus projetos, para que com as sprints, haja um melhor acompanhamento do desenvolvimento. ')
-    imagem_scrum = Image.open('scrum2.png')
+    imagem_scrum = Image.open('arquivos/scrum2.png')
     st.image(imagem_scrum)
 elif visual == 'Carreira':
     st.header('Linha do tempo carreira🥇')
-    image = Image.open('timeline.png')
+    image = Image.open('arquivos/timeline.png')
     st.image(image)
     st.markdown('---')
     st.header('Educação 📖')
@@ -48,15 +48,15 @@ elif visual == 'Carreira':
     col6, col7, col8 = st.columns(3)
     with col6:
         if st.button('Fundamentos Linux Cisco') == True:
-            image1 = Image.open('FundamentosLinuxCertificate1.jpg')
+            image1 = Image.open('arquivos/FundamentosLinuxCertificate1.jpg')
             st.image(image1)
     with col7:
         if st.button('Cybersecurity Cisco'):
-            image2 = Image.open('CyberSecurityCertificate1.jpg')
+            image2 = Image.open('arquivos/CyberSecurityCertificate1.jpg')
             st.image(image2)
     with col8:
         if st.button('Programming Essentials in C'):
-            image3 = Image.open('ProgrammingC_Certificate1.jpg')
+            image3 = Image.open('arquivos/ProgrammingC_Certificate1.jpg')
             st.image(image3)
 
 else:
@@ -75,22 +75,22 @@ else:
         ''')
     with st.expander('Ver detalhes Python:'):
         st.text('Utilizo python para analise de dados utilizando pandas, e até para criação de games como mostra o vídeo abaixo: ')
-        video_file = open('pygame.mp4', 'rb')
+        video_file = open('arquivos/pygame.mp4', 'rb')
         video_bytes = video_file.read()
         st.video(video_bytes)
     with st.expander('Ver detalhes HTML5 e CSS3:'):
         st.text('Utilizando HTML para a edição de textos e o CSS para a estilização, desenvolvo alguns sites simples, no projeto abaixo construi em conjunto com a ROCKETSEAT: ')
-        video_file = open('NLW.mp4', 'rb')
+        video_file = open('arquivos/NLW.mp4', 'rb')
         video_bytes = video_file.read()
         st.video(video_bytes)
     with st.expander('Ver detalhes javascript:'):
         st.text('Utilizando javascript, typescript, react e o CSS para a estilização, desenvolvi um site para encontrar duo em jogos online, no projeto abaixo também construi em conjunto com a ROCKETSEAT, porém dessa vez construí também um servidor para cadastrar os anúncios: ')
-        video_file = open('js.mp4', 'rb')
+        video_file = open('arquivos/js.mp4', 'rb')
         video_bytes = video_file.read()
         st.video(video_bytes)
     with st.expander('Ver detalhes Matlab:'):
         st.text('Para verificar a tensão e corrente em um sistema trifásico, foi plotado um gráfico das grandezas em função do tempo, como mostra abaixo: ')
-        imagem_mat = Image.open('matlab.jpg')
+        imagem_mat = Image.open('arquivos/matlab.jpg')
         st.image(imagem_mat)
     st.markdown('---')
     st.subheader('Ferramentas e experiências ⚒️')
