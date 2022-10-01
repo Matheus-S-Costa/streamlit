@@ -135,7 +135,7 @@ st.sidebar.write("📃-[Meu curículo](%s)" % url_curriculo)
 
 st.markdown(f'''
     <style>
-        section[data-testid="stSidebar"] .css-ng1t4o {{width: 14rem;}}
-        section[data-testid="stSidebar"] .css-1d391kg {{width: 14rem;}}
+        section[data-testid="stSidebar"] .css-ng1t4o {{width: 16rem;}}
+        section[data-testid="stSidebar"] .css-1d391kg {{width: 16rem;}}
     </style>
 ''',unsafe_allow_html=True)
