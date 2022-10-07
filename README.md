@@ -9,6 +9,8 @@ Projeto construído para aprimorar meus conhecimentos com a biblioteca streamlit
 > Atributos das funções:
 > - sumary(): Carrega as informações da primeira página;
 > - edu(): carrega as informações da carreira;
+> - explicacao(): Carrega as informações do expander;
+> - ferramenta(): Carrega as informações de habilidades/ ferramentas
 
 ## ⚒️ Tecnologias
 
