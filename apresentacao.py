@@ -21,9 +21,9 @@ st.sidebar.image(imagem_perfil)
 visual = st.sidebar.selectbox('O que você deseja saber?',
                               ('Sobre mim', 'Carreira', 'Habilidades/Experiências'))
 if visual == 'Sobre mim':
-    st.write(sumary())
+    sumary()
 elif visual == 'Carreira':
-    st.write(edu())  
+    edu() 
 else:
     st.subheader('Habilidades/Projetos💻')
     def load_data():
@@ -38,10 +38,10 @@ else:
     st.write('''
          Cada linguagem tem seus pontos fortes e fracos, busco explorar os pontos fortes de cada uma, sempre pesquisando sobre e me atentando às novidades.
         ''')
-    st.write(explicacao())
+    explicacao()
     st.markdown('---')
     st.subheader('Ferramentas e experiências ⚒️')
-    fr = ferramenta()
+    ferramenta()
 
 st.sidebar.title('Vamos trabalhar juntos?')
 st.sidebar.subheader('Contate-me: ')
