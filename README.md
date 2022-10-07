@@ -6,6 +6,10 @@
 
 Projeto construído para aprimorar meus conhecimentos com a biblioteca streamlit e facilitar o acesso para meus projetos e trabalhos.
 
+> Atributos das funções:
+> - sumary(): Carrega as informações da primeira página;
+> - edu(): carrega as informações da carreira;
+
 ## ⚒️ Tecnologias
 
 - Python
