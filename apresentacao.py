@@ -33,7 +33,7 @@ if visual == 'Sobre mim':
     imagem_scrum = Image.open('arquivos/scrum2.png')
     st.image(imagem_scrum)
 elif visual == 'Carreira':
-    st.header('Linha do tempo carreira🥇')
+    st.header('Linha do tempo carreira🥇')    
     image = Image.open('arquivos/timeline.png')
     st.image(image)
     st.markdown('---')
