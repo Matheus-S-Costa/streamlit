@@ -1,7 +1,10 @@
 import streamlit as st
 from PIL import Image
 import pandas as pd
+from exp import explicacao
 from ferramentas import *
+from certificate import *
+from exp import *
 
 st.set_page_config(page_title='Portfolio Matheus Costa' ,layout="wide",page_icon='💻')
 
@@ -41,24 +44,8 @@ elif visual == 'Carreira':
     if st.button('Graduação'):
         st.write('Após a conclusão do meu ensino médio escolhi ingressar na faculdade de engenharia de computação, principalmente por ter me interessado por ciência da computação. Aqui estou aprimorando meus conhecimentos em desenvolvimento de sistemas, estou utilizando softwares de computação em nuvem da AWS, python para elaborar jogos, sites e para análise de dados, estou utilizando também javascript, html e css para desenvolvimento web.')
 
-    st.header('Certificados 📃')
-    st.write('Estou sempre em busca de construir novos métodos que facilitem nosso dia-a-dia, tanto para empresas quanto para uso pessoal. Confira meus projetos no github (link na aba lateral).')
-    st.write('Agora, para que meus principais certificados possam ser vistos, há alguns botões referentes aos certificados com imagens que podem ser expandidas para facilitar a visualização. Sempre estou em busca de me manter atualizado, portanto, haverá um link com meus certificados, no qual estará em constante atualização!')
-    url_certificados = "https://drive.google.com/drive/folders/1jwOozs2G5rkWRYNifckZIb-g8UxVrT6e?usp=sharing"
-    st.write("📜-[Alguns dos meus certificados](%s)" % url_certificados)
-    col6, col7, col8 = st.columns(3)
-    with col6:
-        if st.button('Fundamentos Linux Cisco') == True:
-            image1 = Image.open('arquivos/FundamentosLinuxCertificate1.jpg')
-            st.image(image1)
-    with col7:
-        if st.button('Cybersecurity Cisco'):
-            image2 = Image.open('arquivos/CyberSecurityCertificate1.jpg')
-            st.image(image2)
-    with col8:
-        if st.button('Programming Essentials in C'):
-            image3 = Image.open('arquivos/ProgrammingC_Certificate1.jpg')
-            st.image(image3)
+    cert = certificados()
+    st.write(cert)
 
 else:
     st.subheader('Habilidades/Projetos💻')
@@ -74,25 +61,7 @@ else:
     st.write('''
          Cada linguagem tem seus pontos fortes e fracos, busco explorar os pontos fortes de cada uma, sempre pesquisando sobre e me atentando às novidades.
         ''')
-    with st.expander('Ver detalhes Python:'):
-        st.text('Utilizo python para analise de dados utilizando pandas, e até para criação de games como mostra o vídeo abaixo: ')
-        video_file = open('arquivos/pygame.mp4', 'rb')
-        video_bytes = video_file.read()
-        st.video(video_bytes)
-    with st.expander('Ver detalhes HTML5 e CSS3:'):
-        st.text('Utilizando HTML para a edição de textos e o CSS para a estilização, desenvolvo alguns sites simples, no projeto abaixo construi em conjunto com a ROCKETSEAT: ')
-        video_file = open('arquivos/NLW.mp4', 'rb')
-        video_bytes = video_file.read()
-        st.video(video_bytes)
-    with st.expander('Ver detalhes javascript:'):
-        st.text('Utilizando javascript, typescript, react e o CSS para a estilização, desenvolvi um site para encontrar duo em jogos online, no projeto abaixo também construi em conjunto com a ROCKETSEAT, porém dessa vez construí também um servidor para cadastrar os anúncios: ')
-        video_file = open('arquivos/js.mp4', 'rb')
-        video_bytes = video_file.read()
-        st.video(video_bytes)
-    with st.expander('Ver detalhes Matlab:'):
-        st.text('Para verificar a tensão e corrente em um sistema trifásico, foi plotado um gráfico das grandezas em função do tempo, como mostra abaixo: ')
-        imagem_mat = Image.open('arquivos/matlab.jpg')
-        st.image(imagem_mat)
+    st.write(explicacao())
     st.markdown('---')
     st.subheader('Ferramentas e experiências ⚒️')
     fr = ferramenta()
