@@ -3,7 +3,6 @@ from PIL import Image
 import pandas as pd
 from exp import explicacao
 from ferramentas import *
-from certificate import *
 from exp import *
 from education import *
 from sumary import *
