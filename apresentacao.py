@@ -40,10 +40,3 @@ st.sidebar.info('''
 )
 st.sidebar.markdown('***')
 
-st.markdown(f'''
-    <style>
-        section[data-testid="stSidebar"] .css-ng1t4o {{width: 18rem;}}
-        section[data-testid="stSidebar"] .css-1d391kg {{width: 18rem;}}
-    </style>
-''',unsafe_allow_html=True)
-
