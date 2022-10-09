@@ -19,13 +19,13 @@ st.sidebar.title('Portfólio pessoal')
 imagem_perfil = Image.open('arquivos/perfil1.png')
 st.sidebar.image(imagem_perfil)
 with st.sidebar:
-    selected = option_menu("Menu de opções", ['Home',"Carreira", 'Habilidades/Experiências'], 
+    selected = option_menu("Menu", ['Home',"Carreira", 'Habilidades'], 
     icons=['house','clipboard-data','code'], menu_icon="cast")
 if selected == 'Home':
     sumary()
 elif selected == 'Carreira':
     edu() 
-elif selected == 'Habilidades/Experiências':
+elif selected == 'Habilidades':
     hab()
 
 st.sidebar.markdown('***')
@@ -39,3 +39,11 @@ st.sidebar.info('''
 '''
 )
 st.sidebar.markdown('***')
+
+st.markdown(f'''
+    <style>
+        section[data-testid="stSidebar"] .css-ng1t4o {{width: 18rem;}}
+        section[data-testid="stSidebar"] .css-1d391kg {{width: 18rem;}}
+    </style>
+''',unsafe_allow_html=True)
+
