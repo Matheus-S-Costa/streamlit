@@ -6,6 +6,7 @@ from ferramentas import *
 from exp import *
 from education import *
 from sumary import *
+from habilities import *
 
 st.set_page_config(page_title='Portfolio Matheus Costa' ,layout="wide",page_icon='💻')
 
@@ -25,23 +26,7 @@ if visual == 'Sobre mim':
 elif visual == 'Carreira':
     edu() 
 else:
-    st.subheader('Habilidades/Projetos💻')
-    def load_data():
-        return pd.DataFrame(
-            {
-                'Linguagens/software': ['Python', 'html e css', 'javascript', 'matlab'],
-                'Maiores utilidades': ['versatil, data science', 'Complemento desenvolvimento web', 'Desenvolvimento web', 'Calculos e plot de graficos']
-            }
-        )
-    df = load_data()
-    st.dataframe(df)
-    st.write('''
-         Cada linguagem tem seus pontos fortes e fracos, busco explorar os pontos fortes de cada uma, sempre pesquisando sobre e me atentando às novidades.
-        ''')
-    explicacao()
-    st.markdown('---')
-    st.subheader('Ferramentas e experiências ⚒️')
-    ferramenta()
+    hab()
 
 st.sidebar.title('Vamos trabalhar juntos?')
 st.sidebar.subheader('Contate-me: ')
@@ -51,7 +36,7 @@ st.sidebar.write("🖥-[GitHub](%s)" % url_git)
 url_linkedin = 'https://www.linkedin.com/in/matheus-s-costaa/'
 st.sidebar.write('📱-[LinkedIn](%s)' % url_linkedin)
 url_curriculo = 'https://drive.google.com/drive/folders/1YjqPgTkX0X51XKj8plJrlPF6yiWzjYyu'
-st.sidebar.write("📃-[Meu curículo](%s)" % url_curriculo)
+st.sidebar.write("📃-[Meu currículo](%s)" % url_curriculo)
 
 st.markdown(f'''
     <style>
@@ -59,3 +44,4 @@ st.markdown(f'''
         section[data-testid="stSidebar"] .css-1d391kg {{width: 16rem;}}
     </style>
 ''',unsafe_allow_html=True)
+

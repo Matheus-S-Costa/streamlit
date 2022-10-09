@@ -1,6 +1,8 @@
     
 from PIL import Image
 import streamlit as st
+import numpy as np
+import pandas as pd
 
 def sumary():
     col1, col2 = st.columns(2)
