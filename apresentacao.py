@@ -39,4 +39,3 @@ st.sidebar.info('''
 '''
 )
 st.sidebar.markdown('***')
-
