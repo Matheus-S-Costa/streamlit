@@ -12,6 +12,10 @@ Projeto construído para aprimorar meus conhecimentos com a biblioteca streamlit
 > - explicacao(): Carrega as informações do expander;
 > - ferramenta(): Carrega as informações de habilidades/ ferramentas
 
+> to run: python3 -m streamlit run apresentacao.py
+
+> or: streamlit run apresentacao.py
+
 ## ⚒️ Tecnologias
 
 - Python
