@@ -1,11 +1,14 @@
 import streamlit as st
+from streamlit_option_menu import option_menu
+from st_on_hover_tabs import on_hover_tabs
+
 from PIL import Image
 from ferramentas import *
 from exp import *
 from education import *
 from sumary import *
 from habilities import *
-from streamlit_option_menu import option_menu
+
 
 st.set_page_config(page_title='Portfolio Matheus Costa' ,layout="wide",page_icon='💻')
 
