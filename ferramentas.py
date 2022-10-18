@@ -21,6 +21,8 @@ def ferramenta():
         st.button('C++')
     with col4:
         st.button('AWS EC2')
+    with col4:
+        st.button('SQLite')
     with col5:
         st.button('Cloud Fundations Google e AWS')
     with col5:
