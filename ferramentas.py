@@ -32,4 +32,4 @@ def ferramenta():
     with col5:
         st.button('MatLab')
 
-#habilidades em colunas
+# todas habilidades em colunas
