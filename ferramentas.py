@@ -31,3 +31,5 @@ def ferramenta():
         st.button('Pycharm')
     with col5:
         st.button('MatLab')
+
+#habilidades em colunas
